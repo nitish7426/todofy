@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import InputField from "./components/InputField";
 import SingleTodo from "./components/SingleTodo";
-import TodoList from "./components/TodoList";
 import { Todo } from "../types";
 
 const App = () => {
@@ -32,7 +31,6 @@ const App = () => {
       />
 
       {/* todo list */}
-      {/* <TodoList /> */}
       {todos.map((value) => (
         <SingleTodo
           key={value.id}
