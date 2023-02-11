@@ -7,7 +7,8 @@ import { Todo } from "../types";
 const App = () => {
   const [text, setText] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>(() => {
-    const todos = JSON.parse(localStorage.getItem("todos") || "");
+    // @ts-ignore
+    const todos = JSON.parse(localStorage.getItem("todos"));
     return todos ? todos : [];
   });
 
